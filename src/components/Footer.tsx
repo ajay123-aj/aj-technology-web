@@ -34,7 +34,7 @@ export default function Footer() {
               Modern AI SaaS software for businesses. Build, scale, and succeed.
             </p>
           </motion.div>
-          <nav className="flex flex-wrap gap-4 sm:gap-6">
+          <nav aria-label="Footer navigation" className="flex flex-wrap gap-4 sm:gap-6">
             {links.map((link, i) => (
               <motion.div
                 key={link.href}

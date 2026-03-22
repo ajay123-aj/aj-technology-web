@@ -29,7 +29,7 @@ export default function Navbar() {
       className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-white/[0.08] backdrop-blur-2xl"
     >
       <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <nav className="relative flex items-center justify-between h-14 sm:h-16 md:h-[72px]">
+        <nav aria-label="Main navigation" className="relative flex items-center justify-between h-14 sm:h-16 md:h-[72px]">
           {/* Logo */}
           <motion.div
             variants={navItem}
