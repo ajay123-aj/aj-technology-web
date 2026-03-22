@@ -11,6 +11,14 @@ export const metadata: Metadata = {
   title: "Aj Technology | Modern AI SaaS Software",
   description:
     "AI-powered software and automation for modern businesses. Build, scale, and succeed.",
+  icons: {
+    icon: [
+      { url: "/favicon.png?v=2", type: "image/png", sizes: "32x32" },
+      { url: "/favicon.png?v=2", type: "image/png", sizes: "any" },
+    ],
+    shortcut: "/favicon.png?v=2",
+    apple: "/favicon.png?v=2",
+  },
 };
 
 export default function RootLayout({

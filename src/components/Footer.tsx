@@ -41,11 +41,12 @@ export default function Footer() {
                 initial={{ opacity: 0, y: 8 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.35, delay: i * 0.05 }}
+                transition={{ duration: 0.35, delay: i * 0.06 }}
+                whileHover={{ y: -2 }}
               >
                 <Link
                   href={link.href}
-                  className="text-sm text-white/70 hover:text-[#00E5FF] transition-colors relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-px after:w-0 after:bg-[#00E5FF] after:transition-all after:duration-300 hover:after:w-full"
+                  className="text-sm text-white/70 hover:text-[#00E5FF] transition-colors duration-300 relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-px after:w-0 after:bg-gradient-to-r after:from-[#7b61ff] after:to-[#00E5FF] after:transition-all after:duration-300 hover:after:w-full"
                 >
                   {link.label}
                 </Link>

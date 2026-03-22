@@ -31,10 +31,17 @@ export default function Navbar() {
       <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <nav className="relative flex items-center justify-between h-14 sm:h-16 md:h-[72px]">
           {/* Logo */}
-          <motion.div variants={navItem} initial="hidden" animate="show" className="flex-shrink-0">
+          <motion.div
+            variants={navItem}
+            initial="hidden"
+            animate="show"
+            whileHover={{ scale: 1.02 }}
+            transition={{ type: "spring", stiffness: 400, damping: 25 }}
+            className="flex-shrink-0"
+          >
             <Link
               href="/"
-              className="text-lg sm:text-xl font-bold text-white hover:text-[#00E5FF] transition-colors"
+              className="text-lg sm:text-xl font-bold text-white hover:text-[#00E5FF] transition-colors duration-300"
               onClick={() => setMobileOpen(false)}
             >
               Aj Technology
@@ -96,14 +103,19 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.25, ease: "easeInOut" }}
+            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
             className="md:hidden border-t border-white/10 bg-white/[0.06] backdrop-blur-xl overflow-hidden"
           >
             <ul className="px-4 py-4 space-y-1">
-              {navLinks.map((link) => {
+              {navLinks.map((link, i) => {
                 const isActive = pathname === link.href;
                 return (
-                  <li key={link.href}>
+                  <motion.li
+                    key={link.href}
+                    initial={{ opacity: 0, x: -12 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: i * 0.05, duration: 0.25 }}
+                  >
                     <Link
                       href={link.href}
                       className={`block py-3.5 px-3 rounded-lg text-base transition-colors min-h-[44px] flex items-center ${isActive ? "text-white font-medium bg-white/10" : "text-white/80 hover:text-white hover:bg-white/5"}`}
@@ -111,10 +123,15 @@ export default function Navbar() {
                     >
                       {link.label}
                     </Link>
-                  </li>
+                  </motion.li>
                 );
               })}
-              <li className="pt-3 mt-2 border-t border-white/10">
+              <motion.li
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+                className="pt-3 mt-2 border-t border-white/10"
+              >
                 <Link
                   href="/contact"
                   className="flex items-center justify-center w-full min-h-[48px] py-3 rounded-xl btn-primary text-center"
@@ -122,7 +139,7 @@ export default function Navbar() {
                 >
                   Get Started
                 </Link>
-              </li>
+              </motion.li>
             </ul>
           </motion.div>
         )}

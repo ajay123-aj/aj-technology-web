@@ -4,11 +4,8 @@ import ProductCard from "@/components/ProductCard";
 import Footer from "@/components/Footer";
 
 const products = [
-  { title: "AI CRM", description: "Smart CRM that tracks customers, automates sales pipelines, and provides AI-driven insights.", iconType: "crm" as const },
-  { title: "AutoInvoice", description: "SaaS platform for automated invoicing, payment tracking, and financial reports.", iconType: "invoice" as const },
-  { title: "AI Chat Support", description: "AI-powered chatbot system for automating customer service on websites.", iconType: "chat" as const },
-  { title: "Workflow Automator", description: "Connect apps and automate repetitive business tasks.", iconType: "workflow" as const },
-  { title: "SaaS Analytics", description: "Real-time dashboard with business analytics and AI predictions.", iconType: "analytics" as const },
+  { title: "AJ Email Editor", description: "Easily create professional email templates with an intuitive drag-and-drop editor. Build beautiful, responsive emails in minutes.", iconType: "workflow" as const, href: "https://aj-email-template-builder.vercel.app/" },
+  { title: "Customer Nurturing", description: "SMS, notifications, WhatsApp, and more—all with AI integration. Set up workflows and automation for end-to-end customer nurturing.", iconType: "chat" as const, href: "/products" },
 ];
 
 export default function Products() {
@@ -23,13 +20,14 @@ export default function Products() {
         />
         <section className="section-padding section-bg-animate">
           <div className="container-narrow">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
               {products.map((p, i) => (
                 <ProductCard
                   key={p.title}
                   title={p.title}
                   description={p.description}
                   iconType={p.iconType}
+                  href={p.href}
                   delay={i * 0.08}
                 />
               ))}

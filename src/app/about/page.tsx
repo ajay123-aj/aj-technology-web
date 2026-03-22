@@ -47,7 +47,23 @@ export default function About() {
 
         <section className="section-padding section-bg-animate bg-white/[0.02]">
           <div className="container-narrow">
-            <h2 className="section-title">Company Story<span className="section-title-accent" /></h2>
+            <motion.h2
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4 }}
+              className="section-title"
+            >
+              Company Story
+              <motion.span
+                className="section-title-accent block"
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                style={{ transformOrigin: "center" }}
+              />
+            </motion.h2>
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -70,7 +86,23 @@ export default function About() {
 
         <section className="section-padding section-bg-animate">
           <div className="container-narrow">
-            <h2 className="section-title">Mission & Vision<span className="section-title-accent" /></h2>
+            <motion.h2
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4 }}
+              className="section-title"
+            >
+              Mission & Vision
+              <motion.span
+                className="section-title-accent block"
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                style={{ transformOrigin: "center" }}
+              />
+            </motion.h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 max-w-4xl mx-auto">
               <motion.div
                 initial={{ opacity: 0, y: 16 }}
@@ -104,7 +136,23 @@ export default function About() {
 
         <section className="section-padding section-bg-animate bg-white/[0.02]">
           <div className="container-narrow">
-            <h2 className="section-title">Leadership Team<span className="section-title-accent" /></h2>
+            <motion.h2
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4 }}
+              className="section-title"
+            >
+              Leadership Team
+              <motion.span
+                className="section-title-accent block"
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                style={{ transformOrigin: "center" }}
+              />
+            </motion.h2>
             <p className="body-text text-center max-w-xl mx-auto mb-8">
               Meet the people building the future of AI-powered software.
             </p>

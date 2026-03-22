@@ -24,12 +24,13 @@ export default function HeroBackground() {
             background: orb.color,
           }}
           animate={{
-            x: [0, 20, -15, 0],
-            y: [0, -15, 20, 0],
-            opacity: [0.6, 0.9, 0.6],
+            x: [0, 24, -18, 0],
+            y: [0, -18, 24, 0],
+            scale: [1, 1.08, 0.95, 1],
+            opacity: [0.6, 0.95, 0.6],
           }}
           transition={{
-            duration: 12 + i * 3,
+            duration: 14 + i * 2,
             repeat: Infinity,
             ease: "easeInOut",
           }}

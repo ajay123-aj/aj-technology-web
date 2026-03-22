@@ -17,10 +17,10 @@ export default function Hero({ title, subtitle, showCta = true }: HeroProps) {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0a0e1a]/90 pointer-events-none" />
       <div className="container-narrow text-center relative z-10 px-4 sm:px-6">
         <motion.p
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, scale: 0.95, y: 8 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-xs font-medium tracking-widest uppercase text-[#00E5FF]/90 mb-4 flex items-center justify-center gap-2"
+          className="text-xs font-medium tracking-widest uppercase text-[#00E5FF]/90 mb-4 flex items-center justify-center gap-2 animate-badge-float"
         >
           <motion.span
             initial={{ scaleX: 0 }}
@@ -37,9 +37,9 @@ export default function Hero({ title, subtitle, showCta = true }: HeroProps) {
           />
         </motion.p>
         <motion.h1
-          initial={{ opacity: 0, y: 24 }}
+          initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
           className="heading-1 mb-4 max-w-3xl mx-auto"
         >
           {title.includes(" ") && title.split(" ").length > 2 ? (
@@ -65,17 +65,25 @@ export default function Hero({ title, subtitle, showCta = true }: HeroProps) {
         )}
         {showCta && (
           <motion.div
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.35 }}
             className="flex flex-wrap gap-3 justify-center"
           >
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
+            <motion.div
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.98 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            >
               <Link href="/contact" className="btn-primary animate-btn-glow">
                 Get Started
               </Link>
             </motion.div>
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
+            <motion.div
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.98 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            >
               <Link href="/products" className="btn-secondary">
                 View Products
               </Link>
