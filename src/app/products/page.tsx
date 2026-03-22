@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 
 const products = [
   { title: "AJ Email Editor", description: "Easily create professional email templates with an intuitive drag-and-drop editor. Build beautiful, responsive emails in minutes.", iconType: "workflow" as const, href: "https://mail.ajtechhub.com/" },
-  { title: "Customer Nurturing", description: "SMS, notifications, WhatsApp, and more—all with AI integration. Set up workflows and automation for end-to-end customer nurturing.", iconType: "chat" as const, href: "/products" },
+  { title: "Customer Nurturing", description: "SMS, notifications, WhatsApp, and more—all with AI integration. Set up workflows and automation for end-to-end customer nurturing.", iconType: "chat" as const, href: "https://nurturing.ajtechhub.com/" },
 ];
 
 export default function Products() {

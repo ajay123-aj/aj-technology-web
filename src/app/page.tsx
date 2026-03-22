@@ -12,7 +12,7 @@ type ProductIconType = "crm" | "invoice" | "chat" | "workflow" | "analytics";
 
 const DEFAULT_PRODUCTS = [
   { title: "AJ Email Editor", description: "Easily create professional email templates with an intuitive drag-and-drop editor. Build beautiful, responsive emails in minutes.", iconType: "workflow" as const, href: "https://mail.ajtechhub.com/" },
-  { title: "Customer Nurturing", description: "SMS, notifications, WhatsApp, and more—all with AI integration. Set up workflows and automation for end-to-end customer nurturing.", iconType: "chat" as const, href: "/products" },
+  { title: "Customer Nurturing", description: "SMS, notifications, WhatsApp, and more—all with AI integration. Set up workflows and automation for end-to-end customer nurturing.", iconType: "chat" as const, href: "https://nurturing.ajtechhub.com/" },
 ];
 
 export default function Home() {
@@ -38,7 +38,7 @@ export default function Home() {
               title: p.title ?? p.name ?? "Product",
               description: p.description ?? "",
               iconType: (["crm", "invoice", "chat"] as const)[i % 3],
-              href: p.href ?? (i === 0 ? "https://mail.ajtechhub.com/" : "/products"),
+              href: p.href ?? (i === 0 ? "https://mail.ajtechhub.com/" : "https://nurturing.ajtechhub.com/"),
             }));
             setProducts(mapped);
           }
