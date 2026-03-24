@@ -13,7 +13,7 @@ const links = [
 export default function Footer() {
   return (
     <motion.footer
-      initial={{ opacity: 0 }}
+      initial={false}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.5 }}
@@ -22,7 +22,7 @@ export default function Footer() {
       <div className="container-narrow">
         <div className="flex flex-col gap-6 sm:gap-8 md:flex-row md:items-center md:justify-between">
           <motion.div
-            initial={{ opacity: 0, x: -12 }}
+            initial={false}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4 }}
@@ -38,7 +38,7 @@ export default function Footer() {
             {links.map((link, i) => (
               <motion.div
                 key={link.href}
-                initial={{ opacity: 0, y: 8 }}
+                initial={false}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.35, delay: i * 0.06 }}
@@ -55,7 +55,7 @@ export default function Footer() {
           </nav>
         </div>
         <motion.div
-          initial={{ opacity: 0 }}
+          initial={false}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.4, delay: 0.1 }}

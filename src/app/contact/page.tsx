@@ -28,7 +28,7 @@ export default function Contact() {
           <div className="container-narrow">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 max-w-5xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, x: -16 }}
+                initial={false}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 className="space-y-4"
@@ -62,7 +62,7 @@ export default function Contact() {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, x: 20 }}
+                initial={false}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
               >

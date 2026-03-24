@@ -48,7 +48,7 @@ export default function About() {
         <section className="section-padding section-bg-animate bg-white/[0.02]">
           <div className="container-narrow">
             <motion.h2
-              initial={{ opacity: 0, y: 12 }}
+              initial={false}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4 }}
@@ -57,7 +57,7 @@ export default function About() {
               Company Story
               <motion.span
                 className="section-title-accent block"
-                initial={{ scaleX: 0 }}
+                initial={false}
                 whileInView={{ scaleX: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 }}
@@ -65,7 +65,7 @@ export default function About() {
               />
             </motion.h2>
             <motion.div
-              initial={{ opacity: 0, y: 16 }}
+              initial={false}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="glass-card p-6 md:p-8 max-w-4xl mx-auto"
@@ -87,7 +87,7 @@ export default function About() {
         <section className="section-padding section-bg-animate">
           <div className="container-narrow">
             <motion.h2
-              initial={{ opacity: 0, y: 12 }}
+              initial={false}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4 }}
@@ -96,7 +96,7 @@ export default function About() {
               Mission & Vision
               <motion.span
                 className="section-title-accent block"
-                initial={{ scaleX: 0 }}
+                initial={false}
                 whileInView={{ scaleX: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 }}
@@ -105,7 +105,7 @@ export default function About() {
             </motion.h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 max-w-4xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, y: 16 }}
+                initial={false}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -4 }}
@@ -118,7 +118,7 @@ export default function About() {
                 </p>
               </motion.div>
               <motion.div
-                initial={{ opacity: 0, y: 24 }}
+                initial={false}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
@@ -137,7 +137,7 @@ export default function About() {
         <section className="section-padding section-bg-animate bg-white/[0.02]">
           <div className="container-narrow">
             <motion.h2
-              initial={{ opacity: 0, y: 12 }}
+              initial={false}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4 }}
@@ -146,7 +146,7 @@ export default function About() {
               Leadership Team
               <motion.span
                 className="section-title-accent block"
-                initial={{ scaleX: 0 }}
+                initial={false}
                 whileInView={{ scaleX: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 }}

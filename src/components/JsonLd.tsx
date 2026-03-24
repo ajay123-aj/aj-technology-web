@@ -1,4 +1,6 @@
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.ajtechhub.com";
+import { getPublicSiteUrl } from "@/lib/publicSiteUrl";
+
+const baseUrl = getPublicSiteUrl();
 
 const jsonLd = {
   "@context": "https://schema.org",

@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
+import { getPublicSiteUrl } from "@/lib/publicSiteUrl";
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.ajtechhub.com";
+const baseUrl = getPublicSiteUrl();
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = ["/", "/products", "/about", "/contact"];

@@ -2,16 +2,18 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/styles/globals.css";
 import JsonLd from "@/components/JsonLd";
+import WebLeadCollector from "@/components/WebLeadCollector";
+import { getMetadataBase, getPublicSiteUrl } from "@/lib/publicSiteUrl";
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.ajtechhub.com";
+const siteUrl = getPublicSiteUrl();
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: getMetadataBase(),
   title: {
     default: "Aj Technology | Modern AI SaaS Software",
     template: "%s | Aj Technology",
@@ -73,6 +75,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.variable} font-sans antialiased min-h-screen bg-[var(--background)] text-[var(--foreground)] overflow-x-hidden`}>
         <JsonLd />
+        <WebLeadCollector />
         {children}
       </body>
     </html>

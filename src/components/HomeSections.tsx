@@ -23,7 +23,7 @@ export default function HomeSections() {
       <section id="services" className="section-padding section-bg-animate bg-white/[0.02]">
         <div className="container-narrow">
           <motion.h2
-            initial={{ opacity: 0, y: 12 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4 }}
@@ -32,7 +32,7 @@ export default function HomeSections() {
             Services
             <motion.span
               className="section-title-accent block"
-              initial={{ scaleX: 0 }}
+              initial={false}
               whileInView={{ scaleX: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
@@ -40,7 +40,7 @@ export default function HomeSections() {
             />
           </motion.h2>
           <motion.p
-            initial={{ opacity: 0, y: 8 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="body-text text-center max-w-xl mx-auto mb-8"
@@ -51,7 +51,7 @@ export default function HomeSections() {
             {services.map((s, i) => (
               <motion.div
                 key={s.title}
-                initial={{ opacity: 0, y: 24 }}
+                initial={false}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-30px" }}
                 transition={{ duration: 0.5, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
@@ -75,7 +75,7 @@ export default function HomeSections() {
       <section id="features" className="section-padding section-bg-animate">
         <div className="container-narrow">
           <motion.h2
-            initial={{ opacity: 0, y: 12 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4 }}
@@ -84,7 +84,7 @@ export default function HomeSections() {
             Features
             <motion.span
               className="section-title-accent block"
-              initial={{ scaleX: 0 }}
+              initial={false}
               whileInView={{ scaleX: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
@@ -92,7 +92,7 @@ export default function HomeSections() {
             />
           </motion.h2>
           <motion.p
-            initial={{ opacity: 0, y: 8 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="body-text text-center max-w-xl mx-auto mb-8"
@@ -103,7 +103,7 @@ export default function HomeSections() {
             {features.map((f, i) => (
               <motion.div
                 key={f.title}
-                initial={{ opacity: 0, y: 24 }}
+                initial={false}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-30px" }}
                 transition={{ duration: 0.5, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
@@ -127,7 +127,7 @@ export default function HomeSections() {
       <section id="cta" className="section-padding section-bg-animate bg-white/[0.02]">
         <div className="container-narrow">
           <motion.div
-            initial={{ opacity: 0, y: 32 }}
+            initial={false}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}

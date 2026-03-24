@@ -23,7 +23,7 @@ export default function Navbar() {
 
   return (
     <motion.header
-      initial={{ opacity: 0, y: -12 }}
+      initial={false}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.35, ease: "easeOut" }}
       className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-white/[0.08] backdrop-blur-2xl"
@@ -33,7 +33,7 @@ export default function Navbar() {
           {/* Logo */}
           <motion.div
             variants={navItem}
-            initial="hidden"
+            initial={false}
             animate="show"
             whileHover={{ scale: 1.02 }}
             transition={{ type: "spring", stiffness: 400, damping: 25 }}
