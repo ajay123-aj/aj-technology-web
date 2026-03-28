@@ -24,7 +24,7 @@ export default function Home() {
         <section id="products" className="section-padding section-bg-animate">
           <div className="container-narrow">
             <motion.h2
-              initial={false}
+              initial={{ opacity: 1, y: 0 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
@@ -33,7 +33,7 @@ export default function Home() {
               Products
               <motion.span
                 className="section-title-accent block"
-                initial={false}
+                initial={{ scaleX: 1 }}
                 whileInView={{ scaleX: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
@@ -41,7 +41,7 @@ export default function Home() {
               />
             </motion.h2>
             <motion.p
-              initial={false}
+              initial={{ opacity: 1, y: 0 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: 0.08 }}

@@ -3,13 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3000",
-    "dev:alt": "next dev -p 3001",
-    "dev:4000": "next dev -p 4000",
+    "clean": "node scripts/clean.cjs",
+    "dev": "node scripts/dev.cjs",
+    "dev:clean": "node scripts/clean.cjs && node scripts/dev.cjs",
     "build": "next build",
     "start": "next start",
-    "start:4000": "next start -p 4000",
-    "start:3001": "next start -p 3001",
     "typecheck": "tsc --noEmit",
     "check": "npm run lint && npm run typecheck && npm run build",
     "lint": "next lint"

@@ -16,14 +16,9 @@ export default function Navbar() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  const navItem = {
-    hidden: { opacity: 0, y: -6 },
-    show: { opacity: 1, y: 0 },
-  };
-
   return (
     <motion.header
-      initial={false}
+      initial={{ opacity: 1, y: 0 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.35, ease: "easeOut" }}
       className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-white/[0.08] backdrop-blur-2xl"
@@ -32,19 +27,16 @@ export default function Navbar() {
         <nav aria-label="Main navigation" className="relative flex items-center justify-between h-14 sm:h-16 md:h-[72px]">
           {/* Logo */}
           <motion.div
-            variants={navItem}
-            initial={false}
-            animate="show"
             whileHover={{ scale: 1.02 }}
             transition={{ type: "spring", stiffness: 400, damping: 25 }}
             className="flex-shrink-0"
           >
             <Link
               href="/"
-              className="text-lg sm:text-xl font-bold text-white hover:text-[#00E5FF] transition-colors duration-300"
+              className="text-lg sm:text-xl inline-flex items-center rounded-md focus-visible:outline-none transition-[filter] duration-300 hover:drop-shadow-[0_0_14px_rgba(123,97,255,0.35)]"
               onClick={() => setMobileOpen(false)}
             >
-              Aj Technology
+              <span className="navbar-brand">Aj Technology</span>
             </Link>
           </motion.div>
 

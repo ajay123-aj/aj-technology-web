@@ -170,10 +170,17 @@ export async function postWebLeadCollect(): Promise<void> {
     const body = await buildWebLeadPayload();
     if (!body.deviceId) return;
 
+    let json: string;
+    try {
+      json = JSON.stringify(body);
+    } catch {
+      return;
+    }
+
     await fetch(url, {
       method: "POST",
       headers: { "Content-Type": "application/json", Accept: "application/json" },
-      body: JSON.stringify(body),
+      body: json,
       keepalive: true,
     }).catch(() => {});
   } catch {

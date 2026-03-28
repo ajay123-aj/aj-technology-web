@@ -17,27 +17,27 @@ export default function Hero({ title, subtitle, showCta = true }: HeroProps) {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#0a0e1a]/90 pointer-events-none" />
       <div className="container-narrow text-center relative z-10 px-4 sm:px-6">
         <motion.p
-          initial={false}
+          initial={{ opacity: 1, scale: 1, y: 0 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="text-xs font-medium tracking-widest uppercase text-[#00E5FF]/90 mb-4 flex items-center justify-center gap-2 animate-badge-float"
         >
           <motion.span
-            initial={false}
+            initial={{ scaleX: 1 }}
             animate={{ scaleX: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             className="origin-right w-8 h-px bg-gradient-to-r from-transparent to-[#00E5FF]/50 rounded-full inline-block"
           />
           AI-Powered SaaS
           <motion.span
-            initial={false}
+            initial={{ scaleX: 1 }}
             animate={{ scaleX: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             className="origin-left w-8 h-px bg-gradient-to-l from-transparent to-[#00E5FF]/50 rounded-full inline-block"
           />
         </motion.p>
         <motion.h1
-          initial={false}
+          initial={{ opacity: 1, y: 0 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
           className="heading-1 mb-4 max-w-3xl mx-auto"
@@ -55,7 +55,7 @@ export default function Hero({ title, subtitle, showCta = true }: HeroProps) {
         </motion.h1>
         {subtitle && (
           <motion.p
-            initial={false}
+            initial={{ opacity: 1, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.25, ease: "easeOut" }}
             className="body-text max-w-xl mx-auto mb-6 text-white/80"
@@ -65,7 +65,7 @@ export default function Hero({ title, subtitle, showCta = true }: HeroProps) {
         )}
         {showCta && (
           <motion.div
-            initial={false}
+            initial={{ opacity: 1, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.35 }}
             className="flex flex-wrap gap-3 justify-center"

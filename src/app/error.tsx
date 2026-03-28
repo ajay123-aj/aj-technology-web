@@ -2,6 +2,12 @@
 
 import { useEffect } from "react";
 
+function getErrorMessage(err: unknown): string {
+  if (err instanceof globalThis.Error) return err.message || "An unexpected error occurred.";
+  if (typeof err === "string") return err;
+  return "An unexpected error occurred. You can try again or refresh the page.";
+}
+
 export default function Error({
   error,
   reset,
@@ -17,7 +23,7 @@ export default function Error({
     <div className="min-h-screen flex flex-col items-center justify-center bg-[#0a0e1a] text-[#e2e8f0] px-6">
       <h1 className="text-2xl font-bold mb-2">Something went wrong</h1>
       <p className="text-white/70 text-center max-w-md mb-6 text-sm leading-relaxed">
-        {error.message || "An unexpected error occurred. You can try again or refresh the page."}
+        {getErrorMessage(error)}
       </p>
       <button
         type="button"

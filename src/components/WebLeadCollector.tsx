@@ -14,7 +14,11 @@ export default function WebLeadCollector() {
   useEffect(() => {
     if (sent.current) return;
     sent.current = true;
-    void postWebLeadCollect().catch(() => {});
+    try {
+      void postWebLeadCollect().catch(() => {});
+    } catch {
+      /* never break render */
+    }
   }, []);
 
   return null;
