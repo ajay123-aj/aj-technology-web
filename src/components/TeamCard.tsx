@@ -125,7 +125,7 @@ export default function TeamCard({
       viewport={{ once: true, margin: "-24px" }}
       transition={{ duration: 0.45, delay, ease: [0.22, 1, 0.36, 1] }}
       whileHover={{ y: -4 }}
-      className="group/card mx-auto w-full max-w-[200px] sm:max-w-[220px]"
+      className="group/card mx-auto w-full max-w-[280px] sm:max-w-[40%] md:max-w-[25%] lg:max-w-[25%]"
     >
       <div className="rounded-xl p-[1px] bg-gradient-to-br from-[#7b61ff]/70 via-[#3b82f6]/45 to-[#00e5ff]/60 shadow-md shadow-[#7b61ff]/10 transition-shadow duration-300 group-hover/card:shadow-[#7b61ff]/20">
         <div className="overflow-hidden rounded-[11px] border border-white/[0.06] bg-[#0c1020]/95 backdrop-blur-sm">
