@@ -55,6 +55,16 @@ export function IconAnalytics({ className = "w-10 h-10", color = iconColors.oran
   );
 }
 
+export function IconGlobe({ className = "w-10 h-10", color = iconColors.cyan }: { className?: string; color?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="12" r="9" />
+      <path d="M3 12h18" />
+      <path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18z" />
+    </svg>
+  );
+}
+
 export function IconCode({ className = "w-9 h-9", color = iconColors.purple }: { className?: string; color?: string }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">

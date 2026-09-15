@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 const productsDescription =
-  "Explore our AI-powered SaaS products: AJ Email Editor for drag-and-drop email templates, Customer Nurturing for SMS, WhatsApp, and AI workflows.";
+  "Explore our AI-powered SaaS products: AJ Email Editor for drag-and-drop email templates, Customer Nurturing for SMS, WhatsApp, and AI workflows, and Aj Smart Biz for a fully managed business website live in one working day.";
 
 export const metadata: Metadata = {
   title: "Products",
