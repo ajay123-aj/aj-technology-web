@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { IconCRM, IconInvoice, IconChat, IconWorkflow, IconAnalytics, IconGlobe } from "./Icons";
+import { IconCRM, IconInvoice, IconChat, IconWorkflow, IconAnalytics, IconGlobe, IconServer } from "./Icons";
 
 const iconMap = {
   crm: IconCRM,
@@ -11,6 +11,7 @@ const iconMap = {
   workflow: IconWorkflow,
   analytics: IconAnalytics,
   globe: IconGlobe,
+  server: IconServer,
 } as const;
 
 export type ProductIconType = keyof typeof iconMap;

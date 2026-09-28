@@ -7,6 +7,7 @@ const products = [
   { title: "AJ Email Editor", description: "Easily create professional email templates with an intuitive drag-and-drop editor. Build beautiful, responsive emails in minutes.", iconType: "workflow" as const, href: "https://mail.ajtechhub.com/" },
   { title: "Customer Nurturing", description: "SMS, notifications, WhatsApp, and more—all with AI integration. Set up workflows and automation for end-to-end customer nurturing.", iconType: "chat" as const, href: "https://nurturing.ajtechhub.com/" },
   { title: "Aj Smart Biz", description: "Your business website built and live in one working day — domain, hosting, SSL, backups and unlimited edits included for one monthly recharge.", iconType: "globe" as const, href: "https://smart-biz.ajtechhub.com/" },
+  { title: "Aj Pilot", description: "Autopilot for your Ubuntu servers — deploy apps from GitHub or GitLab, run Docker and databases, and connect domains with free SSL, all from one panel.", iconType: "server" as const, href: "https://pilot.ajtechhub.com/" },
 ];
 
 export default function Products() {
